@@ -1,0 +1,11 @@
+#container{
+    border: solid black 2px;
+    display: flex;
+}
+.page{
+    height: 70px;
+    width:60px;
+    display:inline-block;
+    background-color: aquamarine;
+    margin: 2px;
+}

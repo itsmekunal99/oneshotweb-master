@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact form</title>
+</head>
+<body>
+    <header>
+        <h1>Contact Me Form</h1>
+        <hr>
+        <form action="blank">
+            <section id="general">
+                <h3>general details</h3>
+                <label for="name">Name : </label>
+                <input  type="text" id="name" name="name" value="" placeholder="enter  full name">
+                <br>
+                <label for="email">email : </label>
+                <input  type="email" id="email" name="email" value="" placeholder="enter valid email">
+                <br>
+                <label for="number">contact number : </label>
+                <input  type="number" id="number" name="number" value="" placeholder="enter valid number">
+                <br>
+            </section>
+            <hr>
+            <section id="other details">
+                <h3>general details</h3>
+                <label for="dob">DOB : </label>
+                <input  type="date" id="dob" name="dob" value="" placeholder="">
+                <br>
+                gender <br>
+                <label for="male">male: </label>
+                <input  type="radio" id="male" name="gender" value="" placeholder="">
+                <label for="female">female: </label>
+                <input  type="radio" id="female" name="gender" value="" placeholder="">
+                <label for="other">other: </label>
+                <input  type="radio" id="other" name="gender" value="" placeholder="">
+                <br>
+                <label for="country">Choose your country</label>
+                <select name="country" id="country" >
+                    <option value="none">--select--</option>
+                    <option value="india">India</option>
+                    <option value="pak">pakistan</option>
+                    <option value="bang">Bangladesh</option>
+                    <option value="srilanka">Sri lanka</option>
+                    <option value="nepal">nepal</option>
+                </select>
+                <br>
+            </section>
+            <hr>
+            <section id="language">
+                <label for="int">select your programming lang</label><br>
+                <label for="C++">C++</label>
+                <input type="checkbox" id="C++" name="int" >
+                <label for="Java">Java</label>
+                <input type="checkbox" id="Java" name="int" >
+                <label for="Python">Python</label>
+                <input type="checkbox" id="python" name="int" >
+            </section>
+            <br>
+            <section id="website">
+                <label for="int">select if you know about</label><br>
+                <label for="html">HTML</label>
+                <input type="checkbox" id="html" name="html" >
+                <label for="css">CSS</label>
+                <input type="checkbox" id="css" name="css" >
+                <label for="js">Javascript</label>
+                <input type="checkbox" id="js" name="js" >
+            </section>
+            <hr>
+            <section id="message">
+               <label>write a short message you want to share</label><br>
+               <textarea name="message" id="mess" cols="30" rows="5">enter your message here</textarea>
+            </section>
+            <button>submit</button>
+        </form>
+    </header>
+    <footer>
+        <a href="/index.html">Return to homepage</a>
+    </footer>
+</body>
+</html>
