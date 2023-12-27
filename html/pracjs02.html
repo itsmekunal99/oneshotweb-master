@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pactice 2</title>
+    <style>
+        .bag{
+            background-color: lightgreen;
+            border: none;
+            border-radius: 10px;
+            padding: 5px 15px;
+        }
+        .wl{
+            border: solid black 1px;
+            border-radius: 8px;
+            padding: 3px 30px;
+            text-transform: uppercase;
+        }
+        .one{
+            background-color: lightgreen;
+            border: none;
+            border-radius: 10px;
+            padding: 5px 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>pracrice js 02 (adding functionality)</h1>
+    <hr>
+    <button class="bag" onclick="
+    bagitem++;
+    document.querySelector('#summary').
+    innerText=`your bag has ${bagitem} items`;
+    alert('added to bag');
+    ">Add to Bag</button>
+
+    <button class="wl" onclick="
+    alert('moved to wishlist💗');
+    bagitem--;
+    document.querySelector('#summary').
+    innerText=`your bag has ${bagitem} items`;"> move to wishlist💗</button>
+    <button class="one" onclick="
+    bagitem +=2;
+    document.querySelector('#summary').
+        innerText=`your bag has ${bagitem} items`;
+        ">Add 1+1 sale item</button>
+    <hr>
+    <h1 id="summary"></h1>
+    <script>
+        let bagitem =0;
+        document.querySelector('#summary').
+        innerText=`your bag has ${bagitem} items`;
+    </script>
+</body>
+</html>
