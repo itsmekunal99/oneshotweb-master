@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>boolean</h1>
+
+    <p>bat ball game =>
+        <button><a href="/projects/batball.html">game</a></button>
+    </p>
+    <script>
+        console.log(5>5);                  // false
+        console.log(typeof(5>5));          // boolean
+
+        console.log(typeof true);          // boolean
+        console.log(typeof 'true');          // string
+
+        // other comparasion operators are 
+        /*
+        >
+        <
+        >=
+        <=
+        ==
+        !=
+        */
+
+        // difference between == and ===
+        // == sometimes does typeconversion and then compare 
+        // === doesn not do any type of conversion checks the value and even the type
+
+        console.log(5=='5')  // true
+        console.log(5==='5')  // false
+
+        // logical operators used with others comparasion operators when we want to put conditions 
+        // like not !
+        // and &&
+        // or ||
+        console.log((5>7)&&(5>4));  //false
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bat-Ball-Game</title>
+</head>
+<body>
+    <!-- in this game there is two player computer and you
+    on every chance there is a combination of two things one selected from your side and one from the 
+    computer side   
+    when bat vs ball => bat wins
+    when ball vs wicket => ball wins
+    when wicket vs bat =>  wicket wins
+     -->
+    <h1>Bat- Ball- Game</h1>
+    <hr>
+    <h3>press any button</h3>
+    <button onclick="
+        console.log('you choose bat');
+        let randnum = Math.random()*3;
+        if(randnum>0 && randnum<=1){
+            let comchoice= 'bat';
+            console.log('comp choose bat');
+        }else if(randnum > 1 && randnum <=2){
+            let comchoice= 'ball';
+            console.log('comp choose ball');
+        }else{
+            let comchoice= 'wicket';
+            console.log('comp choose wicket')
+        }
+        "
+    >bat</button>
+    <button>ball</button>
+    <button>wicket</button>
+
+</body>
+</html>
