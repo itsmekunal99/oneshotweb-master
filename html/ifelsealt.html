@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alternative</title>
+</head>
+<body>
+    <h1>this is if else alternative page</h1>
+    <hr>
+    <p>open console to check results</p>
+    <script>
+        let age =23;
+        let result;
+        if(age<18){
+            result='kid';
+        }else{
+            result= 'adult';
+        }
+        console.log(result);
+
+        // writing this using ternary operator=======================
+        let result2=age<18?'kid':'adult';
+        console.log(result);
+
+        // guard opreator============================================
+        let age2 ;
+        let age3 = age2 || 18;
+        console.log(age2);      // undefined 
+        console.log(age3);      // hense default set to 18
+
+        // let age2 = 21 ;
+        // let age3 = age2 || 18;
+        // console.log(age2);      // 21 
+        // console.log(age3);      // hense set to 21
+
+    </script>
+</body>
+</html>

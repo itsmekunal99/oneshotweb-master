@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bat-Ball-Game</title>
+</head>
+<body>
+    <!-- in this game there is two player computer and you
+    on every chance there is a combination of two things one selected from your side and one from the 
+    computer side   
+    when bat vs ball => bat wins
+    when ball vs wicket => ball wins
+    when wicket vs bat =>  wicket wins
+     -->
+    <h1>Bat- Ball- Game</h1>
+    <hr>
+    <h3>press any button</h3>
+
+    <!-- 4)here we make use of functions to generate random choice of computer -->
+    <button onclick="
+        let result;
+        randomgenerator();      
+        if(comchoice=='bat'){
+            result='its a tie';
+        }else if(comchoice== 'ball'){
+            result=('user won');
+        }else{
+            result=('user lost');
+        }
+        alert(`you choose BAT.\ncomputer choose ${comchoice}.\n${result}`)
+        "
+    >bat</button>
+
+   
+
+    <button 
+        onclick="
+        randomgenerator(); 
+
+        if(comchoice==='bat'){
+            result='user lost';
+        }else if(comchoice=== 'ball'){
+            result=('its  a tie');
+        }else{
+            result=('user won');
+        }
+        alert(`you choose Ball.\ncomputer choose ${comchoice}.\n${result}`)
+        "
+        >ball</button>
+
+        <!-- wicket button -->
+    <button 
+        onclick="
+        randomgenerator(); 
+
+        if(comchoice==='bat'){
+            result='user won';
+        }else if(comchoice=== 'ball'){
+            result=('user lost');
+        }else{
+            result=('its a tie');
+        }
+        alert(`you choose Wicket.\ncomputer choose ${comchoice}.\n${result}`)
+        "
+    >wicket</button>
+    <script>
+        let comchoice;
+        function randomgenerator(){
+            let randnum = Math.random()*3;
+            if(randnum>0 && randnum<=1){
+                comchoice= 'bat';
+            }else if(randnum > 1 && randnum <=2){
+                comchoice= 'ball';
+            }else{
+                comchoice= 'wicket';
+            }
+        }
+
+    </script>
+
+</body>
+</html>

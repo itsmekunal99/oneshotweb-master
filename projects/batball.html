@@ -16,7 +16,10 @@
     <h1>Bat- Ball- Game</h1>
     <hr>
     <h3>press any button</h3>
-    <button onclick="
+
+
+    <!-- 1)structure of bat button of displaying user and computer choice in the console -->
+    <!-- <button onclick="
         console.log('you choose bat');
         let randnum = Math.random()*3;
         if(randnum>0 && randnum<=1){
@@ -30,9 +33,131 @@
             console.log('comp choose wicket')
         }
         "
+    >bat</button> -->
+
+    <!-- 2)restucturing it and declaring the result on basis of choice in the console-->
+    <!-- <button onclick="
+        console.log('you choose bat');
+        let randnum = Math.random()*3;
+        let comchoice;
+        if(randnum>0 && randnum<=1){
+            comchoice= 'bat';
+            // console.log('comp choose bat');
+        }else if(randnum > 1 && randnum <=2){
+            comchoice= 'ball';
+            // console.log('comp choose ball');
+        }else{
+            comchoice= 'wicket';
+            // console.log('comp choose wicket')
+        }
+        console.log(`computer choose ${comchoice}`)
+        
+        if(comchoice=='bat'){
+            console.log('its a tie');
+        }else if(comchoice== 'ball'){
+            console.log('user won');
+        }else{
+            console.log('user lost');
+        }
+        "
+    >bat</button> -->
+
+    <!-- 3)restucturing it again and declaring the result on basis of choice in the alert message-->
+    <button onclick="
+        let randnum = Math.random()*3;
+        let comchoice;
+        let result;
+        if(randnum>0 && randnum<=1){
+            comchoice= 'bat';
+        }else if(randnum > 1 && randnum <=2){
+            comchoice= 'ball';
+        }else{
+            comchoice= 'wicket';
+        }
+    
+        if(comchoice=='bat'){
+            result='its a tie';
+        }else if(comchoice== 'ball'){
+            result=('user won');
+        }else{
+            result=('user lost');
+        }
+        alert(`you choose BAT.\ncomputer choose ${comchoice}.\n${result}`)
+        "
     >bat</button>
-    <button>ball</button>
-    <button>wicket</button>
+
+        <!-- this may be the correct version of the code where i declared randnom2 , comchoice2 and result2 -->
+    <!-- <button onclick="
+    let randnum2 = Math.random()*3;
+    let comchoice2;
+    let result2;
+    if(randnum2>0 && randnum2<=1){
+        comchoice2= 'bat';
+    }else if(randnum2 > 1 && randnum2 <=2){
+        comchoice2= 'ball';
+    }else{
+        comchoice2= 'wicket';
+    }
+
+    if(comchoice2=='bat'){
+        result2='user lost';
+    }else if(comchoice2== 'ball'){
+        result2=('its a tie');
+    }else{
+        result2=('user won');
+    }
+    alert(`you choose BALL.\ncomputer choose ${comchoice2}.\n${result2}`)
+    ">ball</button> -->
+
+
+    <button 
+        onclick="
+        randnum = Math.random()*3;
+        // let comchoice;
+        // let result;
+        if(randnum>0 && randnum<=1){
+            comchoice= 'bat';
+        }else if(randnum > 1 && randnum <=2){
+            comchoice= 'ball';
+        }else{
+            comchoice= 'wicket';
+        }
+
+        if(comchoice==='bat'){
+            result='user lost';
+        }else if(comchoice=== 'ball'){
+            result=('its  a tie');
+        }else{
+            result=('user won');
+        }
+        alert(`you choose Ball.\ncomputer choose ${comchoice}.\n${result}`)
+        "
+        >ball</button>
+
+        <!-- wicket button -->
+    <button 
+        onclick="
+        randnum = Math.random()*3;
+        // let comchoice;
+        // let result;
+        if(randnum>0 && randnum<=1){
+            comchoice= 'bat';
+        }else if(randnum > 1 && randnum <=2){
+            comchoice= 'ball';
+        }else{
+            comchoice= 'wicket';
+        }
+
+        if(comchoice==='bat'){
+            result='user won';
+        }else if(comchoice=== 'ball'){
+            result=('user lost');
+        }else{
+            result=('its a tie');
+        }
+        alert(`you choose Wicket.\ncomputer choose ${comchoice}.\n${result}`)
+        "
+        >wicket</button>
 
 </body>
 </html>
