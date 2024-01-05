@@ -12,8 +12,32 @@
     <script>
         // functions are block of code which is written once and used again and again by calling
         function sum(a, b){
-            console
+            console.log(a+b);
         }
+        sum(4,5);   
+
+        function greet1(){
+            console.log(`hello coder how are you`)
+        }
+
+        function greet(name){
+            console.log(`hello ${name} how are you`)
+        }
+
+        greet1();         
+        greet();         //undefined 
+        greet('rahul');
+
+        // here we set the default value to argument 
+        // hense when we dont pass any arg it will take ram as default value and print
+        function greet2(name='ram'){                         
+            console.log(`hello ${name} how are you`)
+        }
+
+        greet2();
+        greet2('ravi');
+
+
     </script>
 </body>
 </html>
