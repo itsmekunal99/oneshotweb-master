@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects</title>
+</head>
+<body>
+    <h1>objects </h1>
+    <hr>
+    <p>open console to see the code</p>
+    <script>
+        //defining object
+        let employee={
+            name:'rahul',
+            age:34,
+            role:'developer',
+        };
+
+        console.log(employee);
+        console.log(typeof employee);
+        
+        // accessing the properties of object
+        console.log(employee.age);
+        console.log(employee.name);
+        // or bracket notation
+        console.log(employee['name']);
+        // this is used when we have some property name with hifen in it
+        // eg we have a property name =>item-name
+        // we will define the propert in the object with the 'item-name' ie with the quotes
+        // console.log(employee['item-name'])
+
+        // we can edit the property value of an object directly
+        employee.age=56;
+        console.log(employee.age);   // changes to 56 from 34
+
+        // we can delete the property also
+        delete employee.role;
+        // or
+        // delete employee['age'];
+
+        // we can put object and functions in the object
+        let product={
+            'item-name':'t- shirt',
+            company:'Mango',
+            price:399,
+
+            // function inside a object is called method
+            displayprice: function(){
+                console.log(`price of the product is ${product.price}`)
+                // we can also use the keyword this to refer the prop of this object
+                // console.log(`price of the product is ${this.price}`) 
+            }
+        }
+        product.displayprice();
+        // similarly other examples of methods are 
+        // console.log();
+        // Math.random();
+
+        // autoboxing  -->automatic conversion of primitive to objects
+        // this takes string as an object and add methods to it
+        console.log('this is one shot web tutorial'.length);    // this shows the length of the string
+        console.log('this is one shot web tutorial'.replace('one', 'two'));    // this replace the word
+
+        // object work based on reference ==> when a copy of object is created then it points to the same reference
+        // copying a variable copies the actual data 
+        let a = 5; 
+        let b = a;
+        console.log(`a=${a} b=${b}`);     // 5, 5
+        a= 8;
+        console.log(`a=${a} b=${b}`);     // 8, 5  now a does not have any relation with b
+        
+        // but this is not in the case of objects 
+        // here when a object is copied then both the copy point to same reference in the memory
+        let x ={ val:5};
+        let y =x;
+        console.log(`x=${x.val} y=${y.val}`);     // 5, 5  
+        x.val=8;
+        console.log(`x=${x.val} y=${y.val}`);     // 8, 8  they point to same memory loc
+
+        // any change in any of the copies will bring change in all the copies
+
+        // when we compare with == or === then the reference is compared if they are same or not , not the actual value
+        let p ={ val:'aman'};
+        let q ={ val:'aman'};
+        console.log(p==q);  // gives false 
+        // because even if they are having same values but two different references are created in the memory 
+        // and they point to different reference
+
+        // destructuring => we can seperate out any prop from an object and use it seperately 
+        let phone={
+            company:'apple',
+            cost:90000,
+            model:'14pro',
+        };
+        let company = phone.company;
+        console.log(company);      // now we can use it without associating it with the object name
+        // or we can do the same for more than one propery
+        let {cost, model}= phone;
+        console.log(cost);
+        console.log(model);
+
+        // property shorthand 
+        // sometimes we need to assign the value from external variable to a propery in an object 
+        // and both the variable name and property name is same then we can directly write it once
+        let tax = 56;
+        // let goods={
+        //     name:'cargo',
+        //     origin:'usa',
+        //     tax:tax,
+        // };
+        // is same as
+        let goods={
+            name:'cargo',
+            origin:'usa',
+            tax,
+        };
+        console.log(goods.tax)   // prints 56
+
+        // method shothand =>we can skip to write the keyword 'funtion ' inside an object
+        product={
+            'item-name':'t- shirt',
+            company:'Mango',
+            price:399,
+           
+            // displayprice: function(){
+            displayprice(){
+                console.log(`price of the product is ${product.price}`)
+               
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

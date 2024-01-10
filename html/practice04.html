@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice object</title>
+</head>
+<body>
+    <h1>practice 4 - objects</h1>
+    <hr>
+    <p>open inspect to see the code </p>
+    <script>
+        let product ={
+            name:'hoodie',
+            price:560,
+            brand:'adidas',
+            message:'good',
+            status:'complete',
+            'delivery-time':5,
+
+        };
+
+        // using hifen joined property name and accessing it with sq bracket
+        console.log(product['delivery-time']);
+
+        // seperating out the property from an object
+        let {message, status}= product;
+        console.log(message);
+
+        let p={ vat :67};
+        let q=p;
+
+        // changing by callin in one of the object
+        q.vat= 56;
+        // checking if it changed in both or not
+        console.log(p.vat);
+        console.log(q.vat);
+
+        let job={
+            role:'dev',
+            salary:45000,
+            remote:true,
+        };
+        let job2={
+            role:'dev',
+            salary:45000,
+            remote:true,
+        };
+        let job4={
+            role:'dev',
+            salary:50000,
+            remote:true,
+        };
+        let job3= job;
+
+        function isEqual(jobA, jobB){
+            if(typeof jobA != 'object' || typeof jobB != 'object'){
+                console.warn('parameter passed was not an object')
+                return false;
+            }else if(jobA==jobB){
+                return true;
+            }else if(jobA.role==jobB.role &&
+                    jobA.salary==jobB.salary &&
+                    jobA.remote==jobB.remote ){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        console.log(isEqual(job, ''));     // warning with false
+        console.log(isEqual(job,job2));    // true since the values are same
+        console.log(isEqual(job,job3));    // true since they are copy 
+        console.log(isEqual(job,job4));    // false since the value is different
+
+    </script>
+</body>
+</html>

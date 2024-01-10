@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json-DOM</title>
+</head>
+<body>
+    <h1>json - dom</h1>
+    <hr>
+    <p>open inspect</p>
+    <script>
+        // json => javascript object notation
+        // its just the object written in the form of string
+        // it is done for easy transfer over internet
+        // to convert any object to json we use JSON.stringify() method 
+        // to convert any Json to object we use JSON.parse() method
+        // json is a data format whereas javascript object is a data structure
+
+        let product = {
+            brand: 'nike',
+            item:'joggers',
+            price:1200,
+        };
+
+        console.log(typeof product);
+        console.log(product);
+
+        // converting to json
+        let str=JSON.stringify(product);
+        console.log( typeof str);
+        console.log(str);
+        
+        // converting to javascript object
+        let obj = JSON.parse(str);
+        console.log( typeof obj);
+        console.log(obj);
+
+        // now we have learnt to convert it in json format 
+        // we can now store it locally which takes only string
+        // this data remain persistent
+        // we use the setitem('key', 'value') or getitem('key') method 
+
+        localStorage.setItem('price','2350');
+        // localStorage.setItem('name','coder') 
+        localStorage.setItem('tax','4500') 
+
+        // now even if we cooment or remove this name ->coder from the code it still remains in storage 
+        // we can access it by getitem() method
+        console.log(localStorage.getItem('name'));
+
+        // to remove any item from that storage we use remove
+        localStorage.removeItem('tax')
+        
+        // now storing the object 
+        localStorage.setItem('product', JSON.stringify(product));
+
+        // to parse any object from local storage
+        let product2= JSON.parse(localStorage.getItem('product'));
+        console.log(product2);
+
+        // to remove all the data from the storage we use clear() method
+        // localStorage.clear();
+        
+
+
+    </script>
+</body>
+</html>
